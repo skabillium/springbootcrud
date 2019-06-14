@@ -58,7 +58,7 @@ export default {
   mounted() {
     console.log("Supplier mounted");
   },
-  destroyed() {},
+  destroyed() { },
   computed: {}
 };
 
@@ -73,5 +73,5 @@ function initSupplier() {
     zipCode: "",
     city: "",
     country: ""
-  };
+  }
 }
