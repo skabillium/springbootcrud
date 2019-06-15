@@ -71,10 +71,24 @@ export default {
   },
   methods: {
     clearValidation() {
-      console.log('validation cleared')
+      if (this.$refs['supplierForm']) {
+        this.$refs['supplierForm'].clearValidate()
+      }
     },
     save() {
-      console.log('save')
+      this.$refs['supplierForm'].validate().then(() => {
+        if (this.supplier.id != null) {
+          this.$http.patch('suppliers/' + this.supplier.id, this.supplier)
+            .then(response => {
+              this.handleSuccess(response)
+            })
+            .catch(e => this.handleError(e))
+        }
+      }).catch(e => console.log('error', e))
+    },
+    cancel() {
+      this.visible = false
+      this.clearValidation()
     },
     confirmDelete() { },
     onEditSupplier(eventData) {
@@ -89,6 +103,14 @@ export default {
         Object.assign(this.$data.supplier, initSupplier())
         this.visible = true
       }
+    },
+    handleSuccess(response) {
+      this.visible = false
+      this.successFloat(this.$messages.successAction)
+      this.$events.fire('supplier-edited', this.supplier)
+    },
+    handleError(e) {
+      this.showDefaultError(e)
     },
   }
 };
