@@ -116,8 +116,21 @@ export default {
     handleError(e) {
       this.showDefaultError(e)
     },
+    confirmDelete() {
+      this.$confirm(this.$messages.confirmAction, this.$messages.confirmActionTitle, {
+        confirmButtonText: this.$messages.yes,
+        cancelButtonText: this.$messages.no,
+        cancelButtonClass: 'btn btn-warning',
+        confirmButtonClass: 'btn btn-danger',
+        closeOnClickModal: false,
+        closeOnPressEscape: false,
+        type: 'warning'
+      }).then(() => {
+        this.$http.delete('suppliers/' + this.supplier.id).then(response => this.handleSuccess(response))
+      })
+    }
   }
-};
+}
 
 function initSupplier() {
   return {
