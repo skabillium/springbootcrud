@@ -4,22 +4,22 @@ export default {
   components: {
     Person
   },
-  created () {
+  created() {
     this.refreshPersons()
     console.log('Persons created')
   },
-  mounted () {
+  mounted() {
     // subscribe to the 'row-selected' event (wherever it may come from, should come from the child table component)
     this.$events.$on('row-selected', eventData => this.onPersonSelected(eventData))
     this.$events.$on('person-edited', eventData => this.onPersonEdited(eventData))
     console.log('Persons mounted')
   },
-  beforeDestroy () {
+  beforeDestroy() {
     // un-subscribe from events
     this.$events.$off('row-selected')
     this.$events.$off('person-edited')
   },
-  destroyed () {
+  destroyed() {
     console.log('Persons destroyed')
   },
   data: function () {
@@ -54,18 +54,18 @@ export default {
     }
   },
   methods: {
-    createPerson (event) {
+    createPerson(event) {
       console.log('fire edit-person event')
       this.$events.fire('edit-person', null)
     },
-    onPersonSelected (dataItem) {
+    onPersonSelected(dataItem) {
       console.log('fire edit-person event')
       this.$events.fire('edit-person', dataItem)
     },
-    onPersonEdited (dataItem) {
+    onPersonEdited(dataItem) {
       this.refreshPersons()
     },
-    refreshPersons () {
+    refreshPersons() {
       this.$http.get(this.url + this.query)
         .then(response => {
           this.persons = response.data._embedded.persons
