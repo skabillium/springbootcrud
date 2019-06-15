@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="03d5778a-0b09-410c-abfb-0a73da083d6e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springbootcrud-client/src/components/PersonsVM.js" beforeDir="false" afterPath="$PROJECT_DIR$/springbootcrud-client/src/components/PersonsVM.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springbootcrud-client/src/components/Suppliers.vue" beforeDir="false" afterPath="$PROJECT_DIR$/springbootcrud-client/src/components/Suppliers.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springbootcrud-client/src/components/SuppliersVM.js" beforeDir="false" afterPath="$PROJECT_DIR$/springbootcrud-client/src/components/SuppliersVM.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/springbootcrud-service/target/" />
@@ -25,7 +22,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/springbootcrud-domain/src/main/java/gr/publicsoft/springbootcrud/model/Person.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
+            <state relative-caret-position="126">
               <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -49,10 +46,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/springbootcrud-service/src/main/java/gr/publicsoft/springbootcrud/repository/SupplierRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="270">
               <caret line="18" column="80" selection-start-line="18" selection-start-column="80" selection-end-line="18" selection-end-column="80" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#0#112#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -73,12 +71,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/springbootcrud-service/src/main/java/gr/publicsoft/springbootcrud/repository/PersonRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+            <state relative-caret-position="291">
+              <caret line="36" column="77" lean-forward="true" selection-start-line="36" selection-start-column="77" selection-end-line="36" selection-end-column="77" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#0#99#1" expanded="true" />
                 <element signature="e#0#82#0" expanded="true" />
+                <element signature="e#0#82#1" expanded="true" />
+                <element signature="e#0#115#1" expanded="true" />
+                <element signature="e#0#137#1" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,10 +105,11 @@
         <option value="$PROJECT_DIR$/springbootcrud-webapp/src/main/java/gr/publicsoft/springbootcrud/config/RepositoryConfig.java" />
         <option value="$PROJECT_DIR$/springbootcrud-service/src/main/java/gr/publicsoft/springbootcrud/repository/SupplierRepository.java" />
         <option value="$PROJECT_DIR$/springbootcrud-domain/src/main/java/gr/publicsoft/springbootcrud/model/Supplier.java" />
+        <option value="$PROJECT_DIR$/springbootcrud-service/src/main/java/gr/publicsoft/springbootcrud/repository/PersonRepository.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="y" value="30" />
     <option name="width" value="960" />
     <option name="height" value="1050" />
@@ -259,12 +261,12 @@
       <workItem from="1560441600178" duration="2183000" />
       <workItem from="1560523136639" duration="2312000" />
       <workItem from="1560531021042" duration="1508000" />
-      <workItem from="1560605627686" duration="1590000" />
+      <workItem from="1560605627686" duration="3355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18136000" />
+    <option name="totallyTimeSpent" value="19901000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -276,7 +278,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="30" width="1920" height="1050" extended-state="6" />
+    <frame x="0" y="30" width="1920" height="1050" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.29562435" />
@@ -346,26 +348,6 @@
     <entry file="file://$PROJECT_DIR$/springbootcrud-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/springbootcrud-domain/src/main/java/gr/publicsoft/springbootcrud/model/Person.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/springbootcrud-service/src/main/java/gr/publicsoft/springbootcrud/repository/SupplierRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="18" column="80" selection-start-line="18" selection-start-column="80" selection-end-line="18" selection-end-column="80" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/springbootcrud-webapp/src/main/java/gr/publicsoft/springbootcrud/config/RepositoryConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -386,14 +368,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/springbootcrud-service/src/main/java/gr/publicsoft/springbootcrud/repository/SupplierRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="80" selection-start-line="18" selection-start-column="80" selection-end-line="18" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#0#112#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/springbootcrud-domain/src/main/java/gr/publicsoft/springbootcrud/model/Person.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/springbootcrud-service/src/main/java/gr/publicsoft/springbootcrud/repository/PersonRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+        <state relative-caret-position="291">
+          <caret line="36" column="77" lean-forward="true" selection-start-line="36" selection-start-column="77" selection-end-line="36" selection-end-column="77" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#0#99#1" expanded="true" />
             <element signature="e#0#82#0" expanded="true" />
+            <element signature="e#0#82#1" expanded="true" />
+            <element signature="e#0#115#1" expanded="true" />
+            <element signature="e#0#137#1" expanded="true" />
           </folding>
         </state>
       </provider>
