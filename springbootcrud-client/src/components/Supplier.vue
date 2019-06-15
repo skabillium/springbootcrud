@@ -13,7 +13,7 @@
   >
     <el-card>
       <el-form ref="supplierForm" :model="supplier" :rules="rules" label-position="top">
-        <el-row gutter="20">
+        <el-row :gutter="20">
           <!-- LEFT COLUMN -->
           <el-col :span="12">
             <el-form-item label="Εισάγετε το όνομα" prop="firstName">
@@ -71,6 +71,9 @@
         </el-col>
       </el-row>
     </el-card>
+    <div slot="footer" class="dialog-footer card-footer">
+      <el-button type="warning" icon="el-icon-back" @click="cancel">Επιστροφή</el-button>
+    </div>
   </el-dialog>
 </template>
 
