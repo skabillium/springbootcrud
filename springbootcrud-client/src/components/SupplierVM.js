@@ -83,8 +83,12 @@ export default {
               this.handleSuccess(response)
             })
             .catch(e => this.handleError(e))
+        } else {
+          this.$http.post('suppliers', this.supplier)
+            .then(response => this.handleSuccess(response))
+            .catch(e => this.handleError(e))
         }
-      }).catch(e => console.log('error', e))
+      }).catch(e => console.error('VALIDATION FAILED'))
     },
     cancel() {
       this.visible = false
