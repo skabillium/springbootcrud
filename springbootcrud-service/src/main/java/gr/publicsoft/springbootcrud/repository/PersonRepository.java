@@ -28,5 +28,12 @@ public interface PersonRepository extends JpaRepository<Person, Long> {
             + "WHERE p.isActive = true "
             + "     AND p.email IS NOT NULL ")
     Long countActiveUsers();
+
+    @Query("SELECT p FROM Person p "
+        + "WHERE p.isActive = true " +
+            "AND p.email LIKE CONCAT('%',?1,'%')" +
+            "OR p.name LIKE CONCAT('%',?1,'%')" +
+            " AND p.isActive = true")
+    Page<Person> findActive(@Param("query") String query, Pageable pageable);
 }
 
