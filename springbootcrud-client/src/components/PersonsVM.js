@@ -27,7 +27,9 @@ export default {
       url: 'persons/search/findByQuery?query=',
       query: '',
       persons: [],
+      countActiveUrl: 'persons/search/countActiveUsers',
       searchActive: false,
+      activeCount: 0,
       fields: [
         {
           name: 'id',
@@ -72,14 +74,13 @@ export default {
       } else {
         this.url = 'persons/search/findByQuery?query='
       }
-      this.$http.get(this.url + this.query)
-        .then(response => {
-          this.persons = response.data._embedded.persons
-        })
-        .catch(e => {
-          console.log('error: ')
-          console.log(e)
-        })
+      Promise.all([
+        this.$http.get(this.url + this.query),
+        this.$http.get(this.countActiveUrl)
+      ]).then(([personResponse, activeCountResponse]) => {
+        this.persons = personResponse.data._embedded.persons
+        this.activeCount = activeCountResponse.data
+      }).catch(e => console.log(e))
     }
   }
 }

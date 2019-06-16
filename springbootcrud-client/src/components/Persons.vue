@@ -20,6 +20,7 @@
               <el-col>
                 <el-checkbox v-model="searchActive">Εμφάνιση μόνο ενεργών</el-checkbox>
               </el-col>
+              <p>Ενεργοί Χρήστες: {{activeCount}}</p>
             </el-row>
             <el-table
               :data="persons"
@@ -58,4 +59,5 @@
     <person></person>
   </div>
 </template>
+
 <script src="./PersonsVM.js"></script>
