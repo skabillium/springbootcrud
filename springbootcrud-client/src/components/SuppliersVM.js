@@ -9,7 +9,6 @@ export default {
       url: "suppliers/search/findByQuery?query=",
       query: "",
       suppliers: [],
-      searchActive: false,
       fields: [
         {
           name: "id",

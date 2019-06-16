@@ -27,6 +27,7 @@ export default {
       url: 'persons/search/findByQuery?query=',
       query: '',
       persons: [],
+      searchActive: false,
       fields: [
         {
           name: 'id',
@@ -66,6 +67,11 @@ export default {
       this.refreshPersons()
     },
     refreshPersons() {
+      if (this.searchActive) {
+        this.url = 'persons/search/findActive?query='
+      } else {
+        this.url = 'persons/search/findByQuery?query='
+      }
       this.$http.get(this.url + this.query)
         .then(response => {
           this.persons = response.data._embedded.persons

@@ -19,10 +19,6 @@
               <el-col :span="12">
                 <el-button class="el-button--primary" @click="refreshSuppliers()">Search</el-button>
               </el-col>
-
-              <el-col>
-                <el-checkbox v-model="searchActive">Εμφάνιση μόνο ενεργών</el-checkbox>
-              </el-col>
             </el-row>
 
             <el-table :data="suppliers" stripe style="width: 100%">
