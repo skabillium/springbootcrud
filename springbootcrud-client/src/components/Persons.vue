@@ -18,7 +18,7 @@
                 <el-button class="el-button--primary" @click="refreshPersons()">Search</el-button>
               </el-col>
               <el-col>
-                <el-checkbox v-model="searchActive">Εμφάνιση μόνο ενεργών</el-checkbox>
+                <el-checkbox v-model="searchActive" @click="refreshPersons()">Εμφάνιση μόνο ενεργών</el-checkbox>
               </el-col>
               <p>Ενεργοί Χρήστες: {{activeCount}}</p>
             </el-row>

@@ -69,11 +69,14 @@ export default {
       this.refreshPersons()
     },
     refreshPersons() {
+      // If the searchActive option is set to true then the url changes to
+      // to the findActive api operation
       if (this.searchActive) {
         this.url = 'persons/search/findActive?query='
       } else {
         this.url = 'persons/search/findByQuery?query='
       }
+      // Update the persons table and the active counter
       Promise.all([
         this.$http.get(this.url + this.query),
         this.$http.get(this.countActiveUrl)

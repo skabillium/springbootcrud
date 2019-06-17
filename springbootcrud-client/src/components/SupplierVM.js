@@ -62,10 +62,12 @@ export default {
     console.log("Supplier created")
   },
   mounted() {
+    // Subscribe to the 'edit-supplier' event (from the parent component)
     this.$events.$on('edit-supplier', eventData => this.onEditSupplier(eventData))
     console.log("Supplier mounted");
   },
   destroyed() {
+    // Unsubscribe to the 'edit-supplier' event
     this.$events.$off('edit-supplier')
     console.log('Supplier destroyed')
   },
@@ -76,7 +78,9 @@ export default {
       }
     },
     save() {
+      // Validate form
       this.$refs['supplierForm'].validate().then(() => {
+        // Existing supplier, update
         if (this.supplier.id != null) {
           this.$http.patch('suppliers/' + this.supplier.id, this.supplier)
             .then(response => {
@@ -84,6 +88,7 @@ export default {
             })
             .catch(e => this.handleError(e))
         } else {
+          // New supplier, create
           this.$http.post('suppliers', this.supplier)
             .then(response => this.handleSuccess(response))
             .catch(e => this.handleError(e))
@@ -126,12 +131,26 @@ export default {
         closeOnPressEscape: false,
         type: 'warning'
       }).then(() => {
+        // Delete supplier
         this.$http.delete('suppliers/' + this.supplier.id).then(response => this.handleSuccess(response))
       })
     }
   }
 }
-
+/**
+ *  Create a new empty Supplier
+ *  @returns {{ 
+ *    id: null,
+ *    firstName: string,
+ *    lastName: string,
+ *    vatNumber: string,
+ *    irsOffice: string,
+ *    address: string,
+ *    zipcode: string,
+ *    city: string,
+ *    country: string 
+ *  }}
+ */
 function initSupplier() {
   return {
     id: null,

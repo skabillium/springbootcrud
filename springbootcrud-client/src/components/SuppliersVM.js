@@ -68,11 +68,15 @@ export default {
     console.log("Suppliers created");
   },
   mounted() {
+    // Subscribe to the 'supplier-edited' event (from the child table component)
     this.$events.$on('supplier-edited', eventData => this.onSupplierEdited(eventData))
+  },
+  destroyed() {
+    // Unsubscribe from the 'supplier-edited' event
+    this.$events.$off('supplier-edited')
   },
   methods: {
     refreshSuppliers() {
-      console.log(this.searchActive)
       this.$http
         .get(this.url + this.query)
         .then(response => {
